@@ -7,6 +7,11 @@ import { DashboardLayout } from "./components/layout/DashboardLayout";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import SalesData from "./pages/SalesData";
+import TenantManagement from "./pages/TenantManagement";
+import AlertConfiguration from "./pages/AlertConfiguration";
+import DataMapping from "./pages/DataMapping";
+import UserManagement from "./pages/UserManagement";
+import AuditLogs from "./pages/AuditLogs";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,27 +42,27 @@ const App = () => (
           } />
           <Route path="/tenants" element={
             <DashboardLayout>
-              <div className="p-6"><h1 className="text-2xl font-bold">Tenant Management</h1><p className="text-muted-foreground">Coming soon...</p></div>
+              <TenantManagement />
             </DashboardLayout>
           } />
           <Route path="/alerts" element={
             <DashboardLayout>
-              <div className="p-6"><h1 className="text-2xl font-bold">Alert Configuration</h1><p className="text-muted-foreground">Coming soon...</p></div>
+              <AlertConfiguration />
             </DashboardLayout>
           } />
           <Route path="/mapping" element={
             <DashboardLayout>
-              <div className="p-6"><h1 className="text-2xl font-bold">Data Mapping</h1><p className="text-muted-foreground">Coming soon...</p></div>
+              <DataMapping />
             </DashboardLayout>
           } />
           <Route path="/users" element={
             <DashboardLayout>
-              <div className="p-6"><h1 className="text-2xl font-bold">User Management</h1><p className="text-muted-foreground">Coming soon...</p></div>
+              <UserManagement />
             </DashboardLayout>
           } />
           <Route path="/audit" element={
             <DashboardLayout>
-              <div className="p-6"><h1 className="text-2xl font-bold">Audit Logs</h1><p className="text-muted-foreground">Coming soon...</p></div>
+              <AuditLogs />
             </DashboardLayout>
           } />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
